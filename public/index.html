@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-		<center>
-      <title>HinojosaS</title>
+      
 	  <body background ="G:\Mi pagina web\Mi pagina\imagenes\f1.jpg" bigcolor="FECB">
       <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta name="description" content="Este es un documento HTML5">
     	<meta name="keywords" content="HTML, CSS, JavaScript">
     	<link rel="stylesheet" href="misestilos.css">
-    </center>
+	<title>HinojosaS</title>    
+
 </head>
   <body>
-<center>
-  <h1>Servicios</h1>
-  <form action="javascript:saludaHttp();">
-    <center>
-        
-    </center>
-  <center>
-    <table border="1">
-      
+    <h1>Servicios</h1>
+  <form action="javascript:ciudad();">
+    <table>
         <tr>
-            <th colspan="2">Tipo de bebida</th>
+            <th colspan="2">Estado</th>
         </tr>
         <tr>
-            <td>Ingresa el estado al que irs:
-                    <select name="visitas" id="visitas">
+            <td>Ingresa el estado al que ir:
+                    <select id="visitas">
                         <!-- Opciones de la lista -->
                         <option value="1">Guanajuato</option>
                         <option value="2">Jalisco</option>
                         <option value="3">Michoacan</option>
                       </select>
                       <td>Ingrese su edad: 
-        <input type="number" name="numero" value="15" min="18"
+        <input type="number" value="18" min="18"
                         max="60" id="edad"/>
                         
             
         </tr>
      
     </table>
-<td><input type="submit" value="Enviar">
-  </center>
-  
-    <footer>Copyright &copy; 2020 Hinojosa Sanchez Shadanni Lissette.</footer>
+	<button type="submit"> CONSULTAR </button>
   </form>
-</center>
+    <footer>Copyright &copy; 2020 Hinojosa Sanchez Shadanni Lissette.</footer>
   <script>
     //@ts-check
 
@@ -57,7 +48,7 @@
      * función termina correctamente o con error en algún momento futuro.
      * @returns {Promise} para indicar cuando termina correctamente o con
      *  error. */
-    async function saludaHttp() {
+    async function ciudad() {
       try {
         /** La función fetch envía los datos al servidor. El texto que recibe
          * como parámetro es la url que se invoca. El signo de interrogación
@@ -74,7 +65,7 @@
          * de la operación y toma la respuesta devuelta por el servidor.
          * @type {Response} */
         const respuestaHttp =
-          await fetch("saludo?visitas="
+          await fetch("ciudad?visitas="
             // @ts-ignore
             
             + encodeURIComponent(visitas.value.trim())
@@ -104,21 +95,4 @@
     }
   </script>
   </body>
-						  	
-
-		</section>
-		
-	</div>
-</main>
-<footer id="pielogo">
-
-	<div>
-		
-		<section class="seccionpie">
-			
-			<small>&copy; Hinojosa Sanchez Shadanni Lissette 2020</small>
-		</section>
-	</div>
-</footer>
-</body>
 </html>
