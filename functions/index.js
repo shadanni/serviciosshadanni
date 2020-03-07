@@ -29,7 +29,7 @@ exports.ciudad = functions.https.onRequest(
               response.send("Recomendamos que visite : º San Pedro Tlaquepaque º en Jalisco para que la pase muy bien");
         
           } 
-      else if (request.query.bebidas == "3" && request.query.edad >= 18 && request.query.edad < 60) {
+      else if (request.query.visitas == "3" && request.query.edad >= 18 && request.query.edad < 60) {
               response.send("Recomendamos que visite : ºSanta Clara del Cobreº en Michoacan para que la pase muy bien");
 
         }
