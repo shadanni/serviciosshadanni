@@ -39,14 +39,4 @@ exports.ciudad = functions.https.onRequest(
       // Devuelve un texto de error.
       response.send(e.message);
     }
-    <footer id="pielogo">
-
-	<div>
-		
-		<section class="seccionpie">
-			
-			<small>&copy; Hinojosa Sanchez Shadanni Lissette 2020</small>
-		</section>
-	</div>
-</footer>
   });
